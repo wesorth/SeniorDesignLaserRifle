@@ -9,10 +9,12 @@ void setup ()
 
 void loop () {
   if(triggerPin){
-    digitalWrite(laserPin, HIGH);
-    delay(100);
-    digitalWrite(laserPin, LOW);
-    delay(100);
+    for(int temp = 0; temp <250; temp++){ //500Hz
+      digitalWrite(laserPin, HIGH);
+      delay(1);
+      digitalWrite(laserPin, LOW);
+      delay(1);
+    }
     count++;
   }
   if(count ==30){
