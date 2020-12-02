@@ -8,7 +8,7 @@ void setup ()
 }
 
 void loop () {
-  if(triggerPin){
+  if(triggerPin==HIGH){
     for(int temp = 0; temp <250; temp++){ //500Hz
       digitalWrite(laserPin, HIGH);
       delay(1);
